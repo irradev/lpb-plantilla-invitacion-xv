@@ -1,0 +1,67 @@
+<script>
+  const whatsappNumber = '5215554962654';
+
+  const messageConfirm = 'Buen día, quiero confirmar mi asistencia, soy';
+  const messageCancel = 'Lamento no poder asistir, soy';
+</script>
+
+<section class="section">
+  <sergey-import src="components/title_section_bg">
+    Confirmar asistencia
+  </sergey-import>
+
+  <div class="flex flex-col items-center">
+    <h3 class="text-xl lg:text-2xl text-center font-bold mb-8">
+      ¡Gracias por compartir conmigo este día tan especial!
+    </h3>
+
+    <p class="text-lg text-center mb-2">
+      Por favor confirmar asistencia antes del 15 de septiembre.
+    </p>
+    <p class="text-lg">¡Muchas gracias!</p>
+  </div>
+
+  <div
+    class="flex flex-col md:flex-row justify-between items-center gap-8 w-full max-w-2xl mt-8"
+  >
+    <a
+      id="confirm"
+      target="_blank"
+      class="flex items-center gap-2 border text-stone-800 border-stone-800 p-4 text-lg rounded-md font-semibold"
+    >
+      <img
+        src="/assets/img/whatsapp-icon.svg"
+        alt="whatsapp"
+        class="w-6 h-6"
+      />
+      <span>¡Sí, asistiré a este gran día! </span>
+    </a>
+
+    <a
+      id="cancel"
+      target="_blank"
+      class="flex items-center gap-2 border text-stone-800 border-stone-800 p-4 text-lg rounded-md font-semibold"
+    >
+      <img
+        src="/assets/img/whatsapp-icon.svg"
+        alt="whatsapp"
+        class="w-6 h-6"
+      />
+      <span>Lo lamento no podré asistir</span>
+    </a>
+  </div>
+</section>
+
+<script>
+  const baseLink = 'https://api.whatsapp.com/send?phone=';
+
+  const linkConfirm = `${baseLink}${whatsappNumber}&text=${encodeURIComponent(
+    messageConfirm
+  )}`;
+  const linkCancel = `${baseLink}${whatsappNumber}&text=${encodeURIComponent(
+    messageCancel
+  )}`;
+
+  document.getElementById('confirm').href = linkConfirm;
+  document.getElementById('cancel').href = linkCancel;
+</script>

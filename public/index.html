@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1"
+/>
+<link
+  rel="stylesheet"
+  href="/assets/css/config.css"
+/>
+<link
+  rel="stylesheet"
+  href="/assets/css/styles.css"
+/>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link
+  rel="preconnect"
+  href="https://fonts.googleapis.com"
+/>
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="icon"
+  type="image/x-icon"
+  href="/assets/img/favicon.ico"
+/>
+<title>XV Ximena</title>
+
+  </head>
+
+  <body>
+    <header>
+  <!-- <nav>
+    <a href="/">Home</a>
+  </nav> -->
+</header>
+
+    <div class="bg-papel-textura"></div>
+
+    <main
+      class="flex flex-col justify-center items-center gap-20 max-w-screen-xl mx-auto p-4"
+    >
+      <section class="section">
+  <div class="flex flex-col gap-2">
+    <h1 class="font-bold text-center font-dancing text-6xl lg:text-8xl">
+      XV Ximena
+    </h1>
+    <p class="text-xl text-center">Te invito a festejar mi XV aniversario</p>
+  </div>
+
+  <img
+    src="/assets/img/xv/hero.jpg"
+    class="object-cover mx-auto rounded-md w-full md:max-w-xl"
+  />
+</section>
+
+
+  <img
+  src="/assets/img/section_divider.png"
+  class="w-full lg:w-5/12"
+/>
+
+  <script>
+  const FECHA_DEL_EVENTO = '2023-12-31 15:45:00'; // formato YYYY-MM-DD HH:mm:ss
+</script>
+
+<section class="section">
+  <h2 class="text-4xl lg:text-5xl text-center font-dancing">
+  Cuenta regresiva para mi gran día
+</h2>
+
+
+  <div
+  class="cuenta-regresiva-container flex justify-center items-center gap-3 mb-8"
+>
+  <div class="card-number">
+    <div class="text-number">
+      <span id="dias"></span>
+    </div>
+    <span class="text-description">Días</span>
+  </div>
+
+  <div class="card-number">
+    <div class="text-number">
+      <span id="horas"></span>
+    </div>
+    <span class="text-description">Horas</span>
+  </div>
+
+  <div class="card-number">
+    <div class="text-number">
+      <span id="minutos"></span>
+    </div>
+    <span class="text-description">Minutos</span>
+  </div>
+
+  <div class="card-number">
+    <div class="text-number">
+      <span id="segundos"></span>
+    </div>
+    <span class="text-description">Segundos</span>
+  </div>
+</div>
+
+<script>
+  const targetDate = new Date(FECHA_DEL_EVENTO).getTime();
+
+  const countdown = setInterval(function () {
+    const currentDate = new Date().getTime();
+    const timeLeft = targetDate - currentDate;
+
+    if (timeLeft <= 0) {
+      clearInterval(countdown);
+      document.getElementById('dias').textContent = '0';
+      document.getElementById('horas').textContent = '0';
+      document.getElementById('minutos').textContent = '0';
+      document.getElementById('segundos').textContent = '0';
+    } else {
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      let secondsDisplay = seconds;
+      if (seconds < 10) {
+        secondsDisplay = `0${seconds}`;
+      }
+
+      let minutesDisplay = minutes;
+      if (minutes < 10) {
+        minutesDisplay = `0${minutes}`;
+      }
+
+      let hoursDisplay = hours;
+      if (hours < 10) {
+        hoursDisplay = `0${hours}`;
+      }
+
+      let daysDisplay = days;
+      if (days < 10) {
+        daysDisplay = `0${days}`;
+      }
+
+      document.getElementById('dias').textContent = daysDisplay;
+      document.getElementById('horas').textContent = hoursDisplay;
+      document.getElementById('minutos').textContent = minutesDisplay;
+      document.getElementById('segundos').textContent = secondsDisplay;
+    }
+  }, 1000);
+</script>
+
+
+  <div class="w-full max-w-3xl rounded-lg overflow-hidden mb-8">
+    <img
+      src="/assets/img/xv/cuenta_regresiva.jpg"
+      class="w-full"
+    />
+  </div>
+
+  <div class="flex flex-col justify-center items-center max-w-sm">
+  <img
+    src="/assets/img/divider_top.png"
+    class="object-cover w-80"
+  />
+  <div
+    class="flex justify-center items-center p-2 font-bold text-lg text-center"
+  >
+    Hoy mi corazón rebosa de emoción y felicidad. Les extiendo una cálida
+    invocación para formar parte de esta velada que promete ser un cúmulo de
+    momentos inolvidables.
+  </div>
+  <img
+    src="/assets/img/divider_bottom.png"
+    class="object-cover w-60"
+  />
+</div>
+
+</section>
+
+  <!-- <img
+  src="/assets/img/section_divider.png"
+  class="w-full lg:w-5/12"
+/>
+ -->
+
+  <section class="section">
+  <div
+  class="text-center bg-primary p-4 rounded-md w-full max-w-2xl lg:max-w-3xl"
+>
+  <h2 class="text-4xl lg:text-5xl text-center font-dancing">
+    Lugar de mi celebración
+  </h2>
+</div>
+
+
+  <div class="flex flex-col md:flex-row items-stretch gap-8">
+    <!-- + + + + + + + + + + MAPA 1 + + + + + + + + + + -->
+    <div class="flex flex-col items-center rounded-md w-full gap-2 max-w-xs">
+  <h2
+    class="flex-grow flex items-center text-3xl text-center text-stone-800 font-dancing p-2"
+  >
+    Parroquia San José De Benitez
+  </h2>
+  <div class="h-56 bg-primary overflow-hidden rounded-md">
+    <img
+          src="/assets/img/xv/mapa_1.png"
+          style="height: 228px; width: 320px; object-fit: cover"
+        />
+  </div>
+
+  <div class="flex flex-col gap-3 rounded-md border border-stone-400">
+    <div class="p-2 rounded-md shadow-xl">
+      <div class="flex flex-col gap-1">
+        <span class="font-bold text-lg">Cuando:</span>
+        <p class="text-base ml-2">
+          10 de noviembre de 2023 a las 5:45 pm
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-1">
+        <span class="font-bold text-lg">Dirección:</span>
+        <p class="text-base ml-2">
+          Av. 5 de mayo # 19 - 25, 04300 Bogotá, Colombia
+        </p>
+      </div>
+
+      <div class="w-full mt-2 p-4">
+        <a
+          href="https://www.google.com.mx/maps/place/Parroquia+San+Juan+Bautista+Coyoac%C3%A1n/@19.3488902,-99.1647837,17z/data=!3m1!4b1!4m6!3m5!1s0x85d1ffc331ae7955:0x3adba5441ccc1405!8m2!3d19.3488852!4d-99.162595!16s%2Fg%2F1wbry3ph"
+          target="_blank"
+          class="flex justify-center items-center gap-2 text-center"
+        >
+          <img
+            src="/assets/img/map-icon.svg"
+            alt="map"
+            class="w-6 h-6"
+          />
+          <span class="font-bold text-lg">VER EN EL MAPA</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <img
+    src="/assets/img/divider_bottom.png"
+    class="object-cover w-60 opacity-75"
+  />
+</div>
+
+
+    <!-- + + + + + + + + + + MAPA 2 + + + + + + + + + + -->
+    <div class="flex flex-col items-center rounded-md w-full gap-2 max-w-xs">
+  <h2
+    class="flex-grow flex items-center text-3xl text-center text-stone-800 font-dancing p-2"
+  >
+    Salon LeTour Madame
+  </h2>
+  <div class="h-56 bg-primary overflow-hidden rounded-md">
+    <img
+          src="/assets/img/xv/mapa_2.png"
+          style="height: 228px; width: 320px; object-fit: cover"
+        />
+  </div>
+
+  <div class="flex flex-col gap-3 rounded-md border border-stone-400">
+    <div class="p-2 rounded-md shadow-xl">
+      <div class="flex flex-col gap-1">
+        <span class="font-bold text-lg">Cuando:</span>
+        <p class="text-base ml-2">
+          10 de noviembre de 2023 a las 8:45 pm
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-1">
+        <span class="font-bold text-lg">Dirección:</span>
+        <p class="text-base ml-2">
+          Av. 5 de mayo # 19 - 25, 04300 Bogotá, Colombia
+        </p>
+      </div>
+
+      <div class="w-full mt-2 p-4">
+        <a
+          href="https://www.google.com.mx/maps/place/Sal%C3%B3n+de+Fiestas+LEBRAFF/@19.3228767,-99.1600812,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipOQ_JDHMXQJfxc1YznavescpiUi_myoqq5Co8f8!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOQ_JDHMXQJfxc1YznavescpiUi_myoqq5Co8f8%3Dw203-h152-k-no!7i4608!8i3456!4m7!3m6!1s0x85ce003ba8ea7139:0x710a46c3134031e3!8m2!3d19.3227!4d-99.1598538!10e5!16s%2Fg%2F1tdc0zpv?entry=ttu"
+          target="_blank"
+          class="flex justify-center items-center gap-2 text-center"
+        >
+          <img
+            src="/assets/img/map-icon.svg"
+            alt="map"
+            class="w-6 h-6"
+          />
+          <span class="font-bold text-lg">VER EN EL MAPA</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <img
+    src="/assets/img/divider_bottom.png"
+    class="object-cover w-60 opacity-75"
+  />
+</div>
+
+  </div>
+</section>
+
+  <section class="section">
+  <div
+  class="text-center bg-primary p-4 rounded-md w-full max-w-2xl lg:max-w-3xl"
+>
+  <h2 class="text-4xl lg:text-5xl text-center font-dancing">
+    En compañía de mis padres y padrinos
+  </h2>
+</div>
+
+
+  <div class="w-full max-w-xl mt-8">
+    <h3 class="text-3xl lg:text-4xl text-center font-dancing mb-8">
+      Con la bendición de nuestros padres
+    </h3>
+
+    <div class="flex justify-between items-center">
+      <div class="flex flex-col justify-center items-center max-w-sm">
+  <img
+    src="/assets/img/divider_top.png"
+    class="object-cover w-60"
+  />
+  <div
+    class="flex justify-center items-center p-2 font-bold text-xl text-center"
+  >
+    Estela Flores
+  </div>
+  <img
+    src="/assets/img/divider_bottom.png"
+    class="object-cover w-40"
+  />
+</div>
+
+      <div class="flex flex-col justify-center items-center max-w-sm">
+  <img
+    src="/assets/img/divider_top.png"
+    class="object-cover w-60"
+  />
+  <div
+    class="flex justify-center items-center p-2 font-bold text-xl text-center"
+  >
+    Jorge Drexler
+  </div>
+  <img
+    src="/assets/img/divider_bottom.png"
+    class="object-cover w-40"
+  />
+</div>
+
+    </div>
+  </div>
+
+  <div class="w-full max-w-xl mt-8">
+    <h3 class="text-3xl lg:text-4xl text-center font-dancing mb-8">
+      En compañía de nuestros padrinos
+    </h3>
+
+    <div class="flex justify-between items-center">
+      <div class="flex flex-col justify-center items-center max-w-sm">
+  <img
+    src="/assets/img/divider_top.png"
+    class="object-cover w-60"
+  />
+  <div
+    class="flex justify-center items-center p-2 font-bold text-xl text-center"
+  >
+    Ximena Sariñana
+  </div>
+  <img
+    src="/assets/img/divider_bottom.png"
+    class="object-cover w-40"
+  />
+</div>
+
+      <div class="flex flex-col justify-center items-center max-w-sm">
+  <img
+    src="/assets/img/divider_top.png"
+    class="object-cover w-60"
+  />
+  <div
+    class="flex justify-center items-center p-2 font-bold text-xl text-center"
+  >
+    Marco Solis
+  </div>
+  <img
+    src="/assets/img/divider_bottom.png"
+    class="object-cover w-40"
+  />
+</div>
+
+    </div>
+  </div>
+</section>
+
+  <section class="section">
+  <div
+  class="text-center bg-primary p-4 rounded-md w-full max-w-2xl lg:max-w-3xl"
+>
+  <h2 class="text-4xl lg:text-5xl text-center font-dancing">
+    Mi Sesión de fotos
+  </h2>
+</div>
+
+
+  <img
+    src="/assets/img/xv/sesion_foto_1.jpg"
+    class="object-cover mx-auto rounded-md w-full md:max-w-2xl"
+  />
+  <img
+    src="/assets/img/xv/sesion_foto_2.jpg"
+    class="object-cover mx-auto rounded-md w-full md:max-w-2xl"
+  />
+  <img
+    src="/assets/img/xv/sesion_foto_3.jpg"
+    class="object-cover mx-auto rounded-md w-full md:max-w-2xl"
+  />
+  <img
+    src="/assets/img/xv/sesion_foto_4.jpg"
+    class="object-cover mx-auto rounded-md w-full md:max-w-2xl"
+  />
+</section>
+
+  <script>
+  const whatsappNumber = '5215554962654';
+
+  const messageConfirm = 'Buen día, quiero confirmar mi asistencia, soy';
+  const messageCancel = 'Lamento no poder asistir, soy';
+</script>
+
+<section class="section">
+  <div
+  class="text-center bg-primary p-4 rounded-md w-full max-w-2xl lg:max-w-3xl"
+>
+  <h2 class="text-4xl lg:text-5xl text-center font-dancing">
+    Confirmar asistencia
+  </h2>
+</div>
+
+
+  <div class="flex flex-col items-center">
+    <h3 class="text-xl lg:text-2xl text-center font-bold mb-8">
+      ¡Gracias por compartir conmigo este día tan especial!
+    </h3>
+
+    <p class="text-lg text-center mb-2">
+      Por favor confirmar asistencia antes del 15 de septiembre.
+    </p>
+    <p class="text-lg">¡Muchas gracias!</p>
+  </div>
+
+  <div
+    class="flex flex-col md:flex-row justify-between items-center gap-8 w-full max-w-2xl mt-8"
+  >
+    <a
+      id="confirm"
+      target="_blank"
+      class="flex items-center gap-2 border text-stone-800 border-stone-800 p-4 text-lg rounded-md font-semibold"
+    >
+      <img
+        src="/assets/img/whatsapp-icon.svg"
+        alt="whatsapp"
+        class="w-6 h-6"
+      />
+      <span>¡Sí, asistiré a este gran día! </span>
+    </a>
+
+    <a
+      id="cancel"
+      target="_blank"
+      class="flex items-center gap-2 border text-stone-800 border-stone-800 p-4 text-lg rounded-md font-semibold"
+    >
+      <img
+        src="/assets/img/whatsapp-icon.svg"
+        alt="whatsapp"
+        class="w-6 h-6"
+      />
+      <span>Lo lamento no podré asistir</span>
+    </a>
+  </div>
+</section>
+
+<script>
+  const baseLink = 'https://api.whatsapp.com/send?phone=';
+
+  const linkConfirm = `${baseLink}${whatsappNumber}&text=${encodeURIComponent(
+    messageConfirm
+  )}`;
+  const linkCancel = `${baseLink}${whatsappNumber}&text=${encodeURIComponent(
+    messageCancel
+  )}`;
+
+  document.getElementById('confirm').href = linkConfirm;
+  document.getElementById('cancel').href = linkCancel;
+</script>
+
+  <script>
+  const whatsappContactNumber = '5215554962654';
+  const messageToContact = 'Buen día, soy';
+</script>
+
+<section class="section mt-10">
+  <p class="text-base text-center">
+    En caso de cualquier duda por favor contactar a la mamá de la Quinceañera
+  </p>
+
+  <div
+    class="flex items-center gap-2 bg-green-500 p-3 text-base rounded-md font-semibold"
+  >
+    <img
+      src="/assets/img/whatsapp-icon-white.svg"
+      alt="whatsapp"
+      class="w-5 h-5"
+    />
+    <a
+      id="mom_contact"
+      target="_blank"
+      class="text-white"
+      >Contactar a Minerva</a
+    >
+  </div>
+</section>
+
+<script>
+  const baseLinkContact = 'https://api.whatsapp.com/send?phone=';
+
+  const linkContact = `${baseLinkContact}${whatsappContactNumber}&text=${encodeURIComponent(
+    messageToContact
+  )}`;
+
+  document.getElementById('mom_contact').href = linkContact;
+</script>
+
+  <img
+  src="/assets/img/divider_bottom.png"
+  class="w-full lg:w-4/12"
+/>
+    </main>
+
+    <!-- <footer>this is the footer</footer>
+
+<script>
+  /*
+  
+  <a href="https://www.freepik.es/foto-gratis/hermosa-novia-vestido-novia-verde_7947282.htm#query=vestido%20verde%20xv%20a%C3%B1os&position=0&from_view=search&track=ais">Imagen de bristekjegor</a> en Freepik
+
+
+  <a href="https://www.freepik.es/foto-gratis/hermosa-novia-vestido-novia-verde_7947283.htm#query=vestido%20verde%20xv%20a%C3%B1os&position=4&from_view=search&track=ais#position=4&query=vestido%20verde%20xv%20a%C3%B1os">Imagen de bristekjegor</a> en Freepik
+
+
+  <a href="https://www.freepik.es/foto-gratis/hermosa-novia-vestido-novia-verde_7947284.htm#query=vestido%20verde%20xv%20a%C3%B1os&position=10&from_view=search&track=ais">Imagen de bristekjegor</a> en Freepik
+
+  <a href="https://www.freepik.es/foto-gratis/joven-bella-mujer-pie-jardin-verde_1185780.htm#query=vestido%20verde%20xv%20a%C3%B1os&position=18&from_view=search&track=ais">Imagen de v.ivash</a> en Freepik
+
+  Imagen de <a href="https://www.freepik.es/foto-gratis/hermosas-mujeres-jovenes-sus-vestidos-graduacion_18771397.htm#page=2&query=vestido%20verde%20xv%20a%C3%B1os&position=6&from_view=search&track=ais">Freepik</a>
+
+  <a href="https://www.freepik.es/foto-gratis/novia-columpio-flores_9618456.htm#page=2&query=vestido%20verde%20xv%20a%C3%B1os&position=21&from_view=search&track=ais">Imagen de Racool_studio</a> en Freepik
+  */
+</script>
+ -->
+  </body>
+</html>
+

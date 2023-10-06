@@ -1,0 +1,24 @@
+:root {
+  /* + + + + + + + + + + COLORS + + + + + + + + + + */
+  --primary-color: #00c9ab;
+  --text-color: #545454;
+
+  /* + + + + + + + + + + BACKGROUNDS + + + + + + + + + + */
+
+  /* --bg-papel-textura: url('/assets/img/papel_textura.png'); */
+  /* --bg-papel-textura: url('/assets/img/papel_textura2.png'); */
+  --bg-papel-textura: url('/assets/img/papel_textura3.jpg');
+
+  --bg-gradient: radial-gradient(
+    circle,
+    rgba(255, 255, 220, 0.2) 0%,
+    rgba(255, 235, 162, 0.2) 81%,
+    rgba(255, 235, 189, 0.2) 100%
+  );
+
+  /* + + + + + + + + + + DIVIDERS + + + + + + + + + + */
+  --divider-section: url('/assets/img/section_divider.png');
+
+  /* + + + + + + + + + + FONTS + + + + + + + + + + */
+  --primary-font: 'Dancing Script', cursive;
+}

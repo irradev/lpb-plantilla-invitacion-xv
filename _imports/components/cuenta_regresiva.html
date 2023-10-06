@@ -1,0 +1,80 @@
+<div
+  class="cuenta-regresiva-container flex justify-center items-center gap-3 mb-8"
+>
+  <div class="card-number">
+    <div class="text-number">
+      <span id="dias"></span>
+    </div>
+    <span class="text-description">Días</span>
+  </div>
+
+  <div class="card-number">
+    <div class="text-number">
+      <span id="horas"></span>
+    </div>
+    <span class="text-description">Horas</span>
+  </div>
+
+  <div class="card-number">
+    <div class="text-number">
+      <span id="minutos"></span>
+    </div>
+    <span class="text-description">Minutos</span>
+  </div>
+
+  <div class="card-number">
+    <div class="text-number">
+      <span id="segundos"></span>
+    </div>
+    <span class="text-description">Segundos</span>
+  </div>
+</div>
+
+<script>
+  const targetDate = new Date(FECHA_DEL_EVENTO).getTime();
+
+  const countdown = setInterval(function () {
+    const currentDate = new Date().getTime();
+    const timeLeft = targetDate - currentDate;
+
+    if (timeLeft <= 0) {
+      clearInterval(countdown);
+      document.getElementById('dias').textContent = '0';
+      document.getElementById('horas').textContent = '0';
+      document.getElementById('minutos').textContent = '0';
+      document.getElementById('segundos').textContent = '0';
+    } else {
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      let secondsDisplay = seconds;
+      if (seconds < 10) {
+        secondsDisplay = `0${seconds}`;
+      }
+
+      let minutesDisplay = minutes;
+      if (minutes < 10) {
+        minutesDisplay = `0${minutes}`;
+      }
+
+      let hoursDisplay = hours;
+      if (hours < 10) {
+        hoursDisplay = `0${hours}`;
+      }
+
+      let daysDisplay = days;
+      if (days < 10) {
+        daysDisplay = `0${days}`;
+      }
+
+      document.getElementById('dias').textContent = daysDisplay;
+      document.getElementById('horas').textContent = hoursDisplay;
+      document.getElementById('minutos').textContent = minutesDisplay;
+      document.getElementById('segundos').textContent = secondsDisplay;
+    }
+  }, 1000);
+</script>

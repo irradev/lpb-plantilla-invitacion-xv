@@ -1,0 +1,36 @@
+<script>
+  const whatsappContactNumber = '5215554962654';
+  const messageToContact = 'Buen día, soy';
+</script>
+
+<section class="section mt-10">
+  <p class="text-base text-center">
+    En caso de cualquier duda por favor contactar a la mamá de la Quinceañera
+  </p>
+
+  <div
+    class="flex items-center gap-2 bg-green-500 p-3 text-base rounded-md font-semibold"
+  >
+    <img
+      src="/assets/img/whatsapp-icon-white.svg"
+      alt="whatsapp"
+      class="w-5 h-5"
+    />
+    <a
+      id="mom_contact"
+      target="_blank"
+      class="text-white"
+      >Contactar a Minerva</a
+    >
+  </div>
+</section>
+
+<script>
+  const baseLinkContact = 'https://api.whatsapp.com/send?phone=';
+
+  const linkContact = `${baseLinkContact}${whatsappContactNumber}&text=${encodeURIComponent(
+    messageToContact
+  )}`;
+
+  document.getElementById('mom_contact').href = linkContact;
+</script>
