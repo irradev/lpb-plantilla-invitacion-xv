@@ -36,6 +36,16 @@ body {
   width: 100%;
 }
 
+.divider-section-title {
+  background-image: var(--divider-section-title);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60px;
+  margin-bottom: 24px;
+  opacity: 0.6;
+
+}
+
 .card-number {
   display: flex;
   flex-direction: column;
@@ -43,16 +53,17 @@ body {
   justify-content: center;
 
   font-family: var(--primary-font);
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
 
   width: 130px;
   border-radius: 10px;
 }
 
-.card-number > .text-number {
+.card-number>.text-number {
   font-size: 60px;
 }
-.card-number > .text-description {
+
+.card-number>.text-description {
   font-size: 30px;
 }
 
